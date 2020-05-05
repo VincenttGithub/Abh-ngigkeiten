@@ -22,9 +22,9 @@ public class TaskCheck
 
             for (int x = 0; x < sequence.length; x++)
             {
-                if (dependency[0] == sequence[x])
+                if (dependency[0].equals(sequence[x]))
                     index1 = x;
-                else if (dependency[1] == sequence[x])
+                else if (dependency[1].equals(sequence[x]))
                     index2 = x;
             }
 
