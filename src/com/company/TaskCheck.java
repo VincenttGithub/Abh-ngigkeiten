@@ -6,18 +6,25 @@ public class TaskCheck
 
     public boolean isWellSorted(String[] sequence)
     {
-        //If duplicates, false
+        for (int i = 0; i < sequence.length; i++)
+        {
+            for (int x = i+1; x < sequence.length; x++)
+            {
+                if(sequence[x].equals(sequence[i]))
+                    return false;
+            }
+        }
 
-        for (int i = 0; i < dependencies.length; i++)
+        for (String[] dependency : dependencies)
         {
             int index1 = 0;
             int index2 = 0;
 
             for (int x = 0; x < sequence.length; x++)
             {
-                if (dependencies[i][0] == sequence[x])
+                if (dependency[0] == sequence[x])
                     index1 = x;
-                else if (dependencies[i][1] == sequence[x])
+                else if (dependency[1] == sequence[x])
                     index2 = x;
             }
 
