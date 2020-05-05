@@ -9,6 +9,9 @@ class TaskCheckTest
     void testIsWellSorted()
     {
         TaskCheck check = new TaskCheck();
-        assertTrue(check.isWellSorted(new String[]{ "A" , "B", "C", "D" }));
+        //assertTrue(check.isWellSorted(new String[]{ "A" , "D" }));
+        //assertTrue(check.isWellSorted(new String[]{ "A" , "A", "C", "D" }));
+        //assertTrue(check.isWellSorted(new String[]{ "C" , "B", "D" }));
+        assertTrue(check.isWellSorted(new String[]{ "A", "B", "D" }));
     }
 }
