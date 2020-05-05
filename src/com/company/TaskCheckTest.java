@@ -8,6 +8,7 @@ class TaskCheckTest
     @Test
     void testIsWellSorted()
     {
-
+        TaskCheck check = new TaskCheck();
+        assertTrue(check.isWellSorted(new String[]{ "A" , "B", "C", "D" }));
     }
 }
